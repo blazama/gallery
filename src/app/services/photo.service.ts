@@ -9,9 +9,10 @@ const { Camera, Filesystem, Storage } = Plugins;
 })
 export class PhotoService {
 
-  public photos: Photo[] = [];
+  private photos: Photo[] = [];
 
   constructor() {}
+  
 
   public async addNewToGallery() {
     // Take a photo
@@ -26,6 +27,10 @@ export class PhotoService {
       webviewPath: capturedPhoto.webPath
     });
 
+  }
+
+  public getPhotos(): Photo[] {
+    return this.photos;
   }
 
 
