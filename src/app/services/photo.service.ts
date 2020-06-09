@@ -33,5 +33,7 @@ export class PhotoService {
     return this.photos;
   }
 
+  private async savePicture(cameraPhoto: CameraPhoto) { }
+
 
 }
